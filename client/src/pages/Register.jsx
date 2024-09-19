@@ -1,10 +1,13 @@
 import React from 'react'
 import { Form, Input } from  "antd"
-import FormItem from 'antd/es/form/FormItem';
+import {useNavigate} from 'react-router-dom'
 import "../styles/Register.css"
 
 function Register() {
 
+  const navigate = useNavigate()
+
+  //form handler
   const onfinishHandler = (values) =>{
     console.log(values);
     
@@ -12,18 +15,18 @@ function Register() {
   return (
     <div>
       <div className="flex items-center justify-center h-[100vh]">
-        <Form className='p-10 border-[1px] rounded-lg' layout='vertical' onFinish={onfinishHandler}>
+        <Form className='p-10 w-80 border-[1px] rounded-lg' layout='vertical' onFinish={onfinishHandler}>
           <h1>Register Form</h1>
-          <FormItem label="Name" name="name">
+          <Form.Item label="Name" name="name">
             <Input type='text'required/>
-          </FormItem>
-          <FormItem label="Email" name="email">
+          </Form.Item>
+          <Form.Item label="Email" name="email">
             <Input type='email'required/>
-          </FormItem>
-          <FormItem label="Password" name="password">
+          </Form.Item>
+          <Form.Item label="Password" name="password">
             <Input type='password'required/>
-          </FormItem>
-          <button type='submit'>Register</button>
+          </Form.Item>
+          <button className='bg-green-700 px-4 py-2 rounded-md text-white' type='submit'>Register</button>
         </Form>
       </div>
     </div>
