@@ -27,7 +27,7 @@ function Register() {
             <Input type='password'required/>
           </Form.Item>
           <Link to="/login" className='text-blue-500'>Already have an account? Login</Link>
-          <button className='mt-2 bg-green-700 px-4 py-2 rounded-md text-white' type='submit'>Register</button>
+          <button className='mt-2 w-20 font-medium bg-green-700 px-4 py-2 rounded-md text-white' type='submit'>Register</button>
         </Form>
       </div>
     </div>
